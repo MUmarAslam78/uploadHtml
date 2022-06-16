@@ -90,18 +90,18 @@
 							<p>Please fill Microsoft Azure container details</p>
 							<div class="form-row">
 								<div class="form-holder">
-									<input type="text" placeholder="Azure Storage Account" class="form-control">
+									<input type="text" name="azureStorage" id="azureStorage"  required placeholder="Azure Storage Account" class="form-control">
 								</div>
 
 							</div>
 							<div class="form-row">
 								<div class="form-holder">
-									<input type="text" placeholder="Azure Storage Key" class="form-control">
+									<input type="text" name="azureKey" id="azureKey"  required placeholder="Azure Storage Key" class="form-control">
 								</div>
 							</div>
 							<div class="form-row">
 								<div class="form-holder">
-									<input type="text" placeholder="AZURE STORAGE CONTAINER" class="form-control">
+									<input type="text" name="azureContainer" id="azureContainer"  required placeholder="AZURE STORAGE CONTAINER" class="form-control">
 								</div>
 							</div>
 							

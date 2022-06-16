@@ -63,16 +63,16 @@ class HomeController extends Controller
 
 
             #credentials for google cloud
-            $azureName;
-            $azureKey;
-            $azureContainer;
+            $azureName=$request->azureStorage;
+            $azureKey=$request->azureKey;
+            $azureContainer=$request->azureContainer;
 
 
             #credentials for azure
            
             $this->googleCloud($file);
             $this->amazonUpload($file, $bucketName,$bucketKey,$bucketSecretkey,$filePath);
-            $this->azureUpload($file,$filePath);
+            $this->azureUpload($file , $filePath, $azureName , $azureKey , $azureContainer );
 
             return back()->withSuccess('File uploaded successfully');
 
@@ -88,16 +88,17 @@ class HomeController extends Controller
             Storage::disk('s3')->put($filePath, file_get_contents($file));
     }
 
-    public function azureUpload($file,$filePath){
+    public function azureUpload($file , $filePath, $azureName , $azureKey , $azureContainer ){
     
          
             $fileName = time().'_'.$file->getClientOriginalName();
-            Config::set('filesystems.disks.azure.name',$bucket_name);
-            Config::set('filesystems.disks.azure.key',$bucket_secretkey);
-            Config::set('filesystems.disks.azure.container',$bucket_key);
+            Config::set('filesystems.disks.azure.name',$azureName);
+            Config::set('filesystems.disks.azure.key',$azureKey);
+            Config::set('filesystems.disks.azure.container',$azureContainer);
+            Config::set('filesystems.disks.azure.url','https://'.$azureName.'.blob.core.windows.net/');
             // save file to azure blob virtual directory uplaods in your container
             // Storage::disk('azure')->put($filePath, file_get_contents($file));
-            $filePath = $file->storeAs('htmlUpload/', $fileName, 'azure');
+            $url = $file->storeAs($filePath, $fileName, 'azure');
 
             
         
