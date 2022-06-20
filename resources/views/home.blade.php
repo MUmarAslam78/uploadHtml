@@ -120,18 +120,15 @@
 							<div class="form-header">
 								<h3>Upload Files To Cloud Servers</h3>
 							</div>
-							<p>Please fill Microsoft Azure container details</p>
+							<p>Please select file to upload</p>
 							<div class="form-row">
 								<div class="form-holder">
-                <input name="userfile" id="userfile" type="file" value="Select HTML File" required  class="form-control" />
-									
+                				<input name="userfile" id="userfile" type="file" value="Select HTML File" required  class="form-control" />		
 								</div>
-
 							</div>
 							<div class="form-row">
 								<div class="form-holder">
-                <input type="submit" value="Upload HTML File"   />
-									
+                				<input type="submit" value="Upload HTML File"   />	
 								</div>
 							</div>
 							
