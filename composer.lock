@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fb191d73becf95c047ea3dab8c287d78",
+    "content-hash": "3fb8adaccfa4da7e12db78f78aada5dc",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2956,6 +2956,44 @@
                 "source": "https://github.com/nikic/PHP-Parser/tree/v4.14.0"
             },
             "time": "2022-05-31T20:59:12+00:00"
+        },
+        {
+            "name": "pcloud/pcloud-php-sdk",
+            "version": "v1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ivankrastev26/pcloud-php-sdk.git",
+                "reference": "23af45ad8436b8b5718c75fc3cf77fd01008938f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ivankrastev26/pcloud-php-sdk/zipball/23af45ad8436b8b5718c75fc3cf77fd01008938f",
+                "reference": "23af45ad8436b8b5718c75fc3cf77fd01008938f",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "php": ">=5.6.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "5.6"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "pCloud\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "pCloud SDK for PHP",
+            "support": {
+                "issues": "https://github.com/ivankrastev26/pcloud-php-sdk/issues",
+                "source": "https://github.com/ivankrastev26/pcloud-php-sdk/tree/v1.0"
+            },
+            "time": "2017-01-06T10:00:59+00:00"
         },
         {
             "name": "phpoption/phpoption",

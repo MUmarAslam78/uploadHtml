@@ -6,6 +6,8 @@ use Illuminate\Support\Facades\Storage;
 use Artisan;
 use Config;
 use Google\Cloud\Storage\StorageClient;
+// use pCloud\File;
+
 
 
 class HomeController extends Controller
@@ -36,6 +38,7 @@ class HomeController extends Controller
 
         #calling functions
         $this->googleCloud($file , $filePath);
+        //$this->pCloud($file , $filePath);
         $this->amazonUpload($file, $bucketName,$bucketKey,$bucketSecretkey,$filePath);
         $this->azureUpload($file , $filePath, $azureName , $azureKey , $azureContainer );
 
@@ -83,6 +86,18 @@ class HomeController extends Controller
               
     }
 
+     # Pcloud upload
+   public function pCloud($file , $filePath){
+
+    $pCloudfile = new File();  
+    $fileMetadata = $pCloudfile->upload($file);
+    dd($fileMetadata);
+
+          
+}
 
 
 }
+
+
+
