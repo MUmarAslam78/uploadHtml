@@ -83,6 +83,7 @@ class HomeController extends Controller
         'predefinedAcl' => 'publicRead',
         'name' => $googleCloudStoragePath
         ]);
+      
               
     }
 

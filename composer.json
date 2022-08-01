@@ -15,7 +15,8 @@
         "laravel/tinker": "^2.7",
         "league/flysystem-aws-s3-v3": "^3.0",
         "matthewbdaly/laravel-azure-storage": "^2.0",
-        "pcloud/pcloud-php-sdk": "1.*"
+        "pcloud/pcloud-php-sdk": "1.*",
+        "tavux/laravel-ibm-cos": "^1.0"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
